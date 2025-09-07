@@ -51,7 +51,7 @@ function Header({ token, setToken }) {   // ✅ accept token + setToken as props
       {/* Right side photo */}
       <div>
         <img
-          src="/profile.jpg"   // 👉 place your photo in public/profile.jpg
+          src={process.env.PUBLIC_URL + "/profile.jpg"} // 👉 place your photo in public/profile.jpg
           alt="Profile"
           style={{ width: "200px", height: "200px", borderRadius: "50%" }}
         />

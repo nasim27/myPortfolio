@@ -9,7 +9,7 @@ function Login({ setToken }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://127.0.0.1:8000/api-token-auth/", {
+      const res = await axios.post("https://myportfolio-a8wj.onrender.com/api-token-auth/", {
         username,
         password,
       }, {

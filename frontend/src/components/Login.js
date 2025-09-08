@@ -8,14 +8,18 @@ function Login({ setToken }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const res = await axios.post("https://myportfolio-a8wj.onrender.com/api-token-auth/", {
-        username,
-        password,
-      }, {
-        headers: { "Content-Type": "application/json" }   // ✅ important
-      });
 
+    try {
+      const res = await axios.post(
+        "https://myportfolio-a8wj.onrender.com/api/login/", // Adjusted endpoint
+        { username, password },
+        {
+          headers: { "Content-Type": "application/json" },
+          withCredentials: false, // Token auth, no cookies
+        }
+      );
+
+      // Save token for future requests
       localStorage.setItem("token", res.data.token);
       setToken(res.data.token);
       setError("");

@@ -23,9 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-l8kle*1dx$=kfkz%jpz6m5e#pybeo4&p!pg4=+!&r332ndla&&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["myportfolio-a8wj.onrender.com"]
+ALLOWED_HOSTS = ["127.0.0.1",
+    "localhost","myportfolio-a8wj.onrender.com"]
 
 
 # Application definition
@@ -59,8 +60,19 @@ MIDDLEWARE = [
     
 ]
 
-CORS_ALLOW_ALL_ORIGINS = True   # for dev only, later restrict
+CORS_ALLOW_ALL_ORIGINS = False   # for dev only, later restrict
 
+CORS_ALLOWED_ORIGINS = [
+"https://nasim27.github.io",
+"https://myportfolio-a8wj.onrender.com",
+]
+
+# --- CSRF ---
+CSRF_TRUSTED_ORIGINS = [
+    "https://nasim27.github.io",
+    "https://myportfolio-a8wj.onrender.com",
+]
+    
 ROOT_URLCONF = 'backend.urls'
 
 TEMPLATES = [

@@ -9,7 +9,7 @@ function Education() {
 
         <div className="bg-slate-800 p-6 rounded-2xl">
           <h3 className="text-2xl font-bold">
-            Ph.D. in Information Engineering
+            Ph.D. in Information Engineering (Discontinued)
           </h3>
 
           <p className="text-cyan-300">
@@ -39,7 +39,7 @@ function Education() {
 
         <div className="bg-slate-800 p-6 rounded-2xl">
           <h3 className="text-2xl font-bold">
-            Bachelor in Fundamental Informatics & IT
+            Bachelor in Fundamental Informatics & Information Technologies
           </h3>
 
           <p className="text-cyan-300">
